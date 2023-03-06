@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: jvm-build-suite-component-rkho
+  namespace: jvm-build-noqa-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:b0bbfb591a520880f5894d42bfd935318d9c7f4b269bd71384a373dd2e8559ae
+        name: container-image
+        resources: {}
+status: {}
